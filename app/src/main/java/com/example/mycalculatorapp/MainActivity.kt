@@ -3,18 +3,17 @@ package com.example.mycalculatorapp
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bar_layout.*
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
-import java.lang.Exception
+
 
 class MainActivity : AppCompatActivity() {
 
     var process: String? = null
+//    var history: List<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -136,6 +135,7 @@ class MainActivity : AppCompatActivity() {
                 "0"
             }
             result.setText(finalResult)
+//            history.add(String.valueOf(result)
         })
 
         btn_History.setOnClickListener {
